@@ -1,3 +1,40 @@
 body {
-    background-color:rgb(207, 199, 238)
+    background-color:rgb(207, 199, 238);
+    font-family:'Gantari', Geneva, Verdana, sans-serif;
+}
+h1 {
+text-align: center;
+}
+
+#quizArea {
+
+}
+
+#question {
+
+}
+
+#choice {
+
+}
+button {
+    padding: 20px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#trueButton {
+background-color: aqua;
+color: black;
+}
+
+#falseButton {
+background-color: aqua;
+color: black;
+}
+
+#results {
+
 }
