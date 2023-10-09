@@ -10,7 +10,7 @@ function loadQuestion(){
     } else {
         showResults(); 
     }
-};
+}
 //adds event listener to true button and hands to function
 document.getElementById("trueButton").addEventListener("click", handleTrueButtonClick);
 
@@ -19,10 +19,10 @@ function handleTrueButtonClick(){
     if(questions[currentQuestion].answer === true){
         score ++;
     }
-    currentQuestion++
+    currentQuestion++;
     document.getElementById("score").textContent = score;
       loadQuestion();
-}; 
+} 
 
 //adds event listener to false button and hands to function
 document.getElementById("falseButton").addEventListener("click", handleFalseButtonClick);
@@ -32,10 +32,10 @@ function handleFalseButtonClick(){
     if(questions[currentQuestion].answer === false){
         score ++;
     }
-   currentQuestion++
+   currentQuestion++;
    document.getElementById("score").textContent = score;
       loadQuestion();
-};
+}
 
 //collates score out of 10 and displays in final score paragraph 
 function showResults(){
@@ -43,7 +43,7 @@ function showResults(){
     document.getElementById("finalScore").textContent = score ;
 
     document.getElementById("congratulationsMessage").textContent = ` Congratulations, ${username}!`; 
-};
+}
 
 //score variable question variable
 let score = 0;
