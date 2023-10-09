@@ -1,5 +1,5 @@
 //starts quiz after DOCLoadingComplete
-/*addEventListener("DOMContentLoaded", function () {*/
+addEventListener("DOMContentLoaded", function () {
  let username = "";
  
 //loads question when called by username
@@ -16,11 +16,11 @@ document.getElementById("trueButton").addEventListener("click", handleTrueButton
 
 //handles true button click event, checks boolean, advances to next question 
 function handleTrueButtonClick(){
-    if(questions[currentQuestion].answer === true) {
+    if(questions[currentQuestion].answer === true){
         score ++;
     }
     currentQuestion++
-    document.getElementById("score").textcontent = score;
+    document.getElementById("score").textContent = score;
       loadQuestion();
 }; 
 
@@ -39,6 +39,7 @@ function handleFalseButtonClick(){
 
 //collates score out of 10 and displys in final score paragraph 
 function showResults(){
+    document.getElementById("results").classList.remove("hidden");
     document.getElementById("finalScore").textContent = score +"/10";
 
     document.getElementById("congratulationsMessage").textContent = ` Congratulations, ${username}!`; 
@@ -64,8 +65,8 @@ const questions = [
 //username handle, and event listener to pass to loadQuestion
 document.getElementById("start").addEventListener("click",() => {
     username = document.getElementById("username").value;
-    document.getElementById("usernameArea");
+    document.getElementById("usernameArea").classList.add("hidden");
     loadQuestion();
  });
 
-/*};*/
+});
