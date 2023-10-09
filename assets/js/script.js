@@ -37,7 +37,7 @@ function handleFalseButtonClick(){
       loadQuestion();
 };
 
-//collates score out of 10 and displys in final score paragraph 
+//collates score out of 10 and displays in final score paragraph 
 function showResults(){
     document.getElementById("results").classList.remove("hidden");
     document.getElementById("finalScore").textContent = score ;
@@ -45,7 +45,7 @@ function showResults(){
     document.getElementById("congratulationsMessage").textContent = ` Congratulations, ${username}!`; 
 };
 
-//score variable
+//score variable question variable
 let score = 0;
 let currentQuestion =0;
 //questions array of question:value, answer:value objects
@@ -62,7 +62,7 @@ const questions = [
     { question: "True or False: The Irish Grand National was won by 'I Am Roy Keane', trained by Willie Mullins", answer: false },
 ];
 
-//username handle, and event listener to pass to loadQuestion
+//username handle, and event listener to pass  start to loadQuestion
 document.getElementById("start").addEventListener("click",() => {
     username = document.getElementById("username").value;
     document.getElementById("usernameArea").classList.add("hidden");
