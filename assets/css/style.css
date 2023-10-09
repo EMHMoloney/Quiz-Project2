@@ -33,7 +33,7 @@ margin-top: 30px;
 }
 button {
     padding: 20px 20px;
-    font-size: 18px;
+    font-size: 25px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
@@ -46,7 +46,7 @@ border: none
 }
 
 #falseButton {
-background-color: #ad5858;
+background-color: #7c976c;
 color: black;
 border: none;
 }
@@ -73,15 +73,17 @@ font-size:30px;
     text-align:center;
     margin-top:20px;
 }
-#start {}
+#start {
+    background-color:#ad5858
+}
 label {
     font-size:20px;
 }
 
 #username {
-    padding: 10px;
-    font-size:18px;
-    border:1px solid black;
+    padding: 25px;
+    font-size: 20px;
+    border:2px solid black;
     border-radius:15px;
     margin-right:5px;
 }
