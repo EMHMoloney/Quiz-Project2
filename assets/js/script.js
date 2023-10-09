@@ -1,25 +1,54 @@
 //starts quiz after DOCLoadingComplete
-addEventListener("DOMContentLoaded", function () {
+/*addEventListener("DOMContentLoaded", function () {*/
  let username = "";
-
-function loadQuestion (){
-
+ 
+//loads question when called by username
+function loadQuestion(){
+    if(currentQuestion<questions.length){
+        document.getElementById("question").textContent = questions[currentQuestion].question;
+        document.getElementById("currentQuestion").textContent = currentQuestion+1;
+    } else {
+        showResults(); 
+    }
 };
-//handles 
+//adds event listener to true button and hands to function
+document.getElementById("trueButton").addEventListener("click", handleTrueButtonClick);
+
+//handles true button click event, checks boolean, advances to next question 
 function handleTrueButtonClick(){
+    if(questions[currentQuestion].answer === true) {
+        score ++;
+    }
+    currentQuestion++
+    document.getElementById("score").textcontent = score;
+      loadQuestion();
+}; 
 
-};
+//adds event listener to false button and hands to function
+document.getElementById("falseButton").addEventListener("click", handleFalseButtonClick);
+
+// handles false button click event, checks boolean, advances to next question
 function handleFalseButtonClick(){
-
+    if(questions[currentQuestion].answer === false){
+        score ++;
+    }
+   currentQuestion++
+   document.getElementById("score").textContent = score;
+      loadQuestion();
 };
 
+//collates score out of 10 and displys in final score paragraph 
 function showResults(){
+    document.getElementById("finalScore").textContent = score +"/10";
 
+    document.getElementById("congratulationsMessage").textContent = ` Congratulations, ${username}!`; 
 };
+
 //score variable
 let score = 0;
+let currentQuestion =0;
 //questions array of question:value, answer:value objects
-let questions = [
+const questions = [
     { question: "True or False:Irish film 'An Irish Goodbye'won the Oscar for Best Short Film. " , answer:true },
     { question: "True or False:The 2023 Rugby World Cup hosts are South Africa. ", answer: false},
     { question: "True or False: Michael D. Higgins and Leo Varadkar became the first ever President and Taoiseach to attend a British coronation.  ", answer: true },
@@ -31,10 +60,12 @@ let questions = [
     { question: "True or False: Comedian Patrick Kielty took over as the new host of The Late Late Show", answer: true },
     { question: "True or False: The Irish Grand National was won by 'I Am Roy Keane', trained by Willie Mullins", answer: false },
 ];
-//event listeners required
-addEventListener("click", handleTrueButtonClick);
-addEventListener("click", handleFalseButtonClick);
-//username handle
-document.getElementById("username");
 
-);
+//username handle, and event listener to pass to loadQuestion
+document.getElementById("start").addEventListener("click",() => {
+    username = document.getElementById("username").value;
+    document.getElementById("usernameArea");
+    loadQuestion();
+ });
+
+/*};*/

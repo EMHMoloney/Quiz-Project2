@@ -19,8 +19,8 @@
               </div>
               <!--div for answer option buttons-->
               <div class="choice">
-              <button id="true">True</button>
-              <button id="false">False</button>
+              <button id="trueButton">True</button>
+              <button id="falseButton">False</button>
               </div>
             
               </div>
@@ -35,13 +35,14 @@
         <div id="results">
         <h3>Your Quiz is all done!</h3>
         <p>You scored <span id = "finalScore"> 0 </span>out of 10!</p>
-        <p > Now see how well your friends can do?</p>
+        <p id = "congratulationsMessage"></p>
         </div>
     </div>
     <!--username input area-->
     <div id = "usernameArea">
        <label for ="username">Enter a Username:</label>
        <input type = "text" id = "username">
+       <button id = "start">Start Here</button>
     </div>
     <script src="assets/js/script.js"></script>
   </body>
