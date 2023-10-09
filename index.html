@@ -11,33 +11,38 @@
     <div class="container">
       <h1>Quiz of the Year 2023</h1>
       <!--quiz area-->
-    </div class = "quiz">
-      <div class="quizArea">
-        <!--div to display questions-->
-        <div class="questionArea">
-          <h2 id = "question">Questions</h2>
+       <div class = "quiz">
+          <div id ="quizArea">
+              <!--div to display questions-->
+              <div class="questionArea">
+              <h2 id = "question">Question</h2>
+              </div>
+              <!--div for answer option buttons-->
+              <div class="choice">
+              <button id="true">True</button>
+              <button id="false">False</button>
+              </div>
+            
+              </div>
+              <!--div for score progress-user feedback-->
+               <div id="progress">
+              <p>Question <span id = "currentQuestion">1</span></p>
+              <p>Score: <span id = "score"> 0 </span> out of 10</p>
+               </div>
+            </div>
         </div>
-      <!--div for answer option buttons-->
-      <div class="choice">
-        <button id="true">True</button>
-        <button id="false">False</button>
-      </div>
-    </div>
-    <!--div for score progress-user feedback-->
-    <div id="progress">
-      <p>Question <span id = "currentQuestion">1</span></p>
-      <p>Score: <span id = "score"> 0 </span> out of 10</p>
-    </div>
-</div>
-<!-- div to display final tally-->
-    <div id="results">
+        <!-- div to display final tally-->
+        <div id="results">
         <h3>Your Quiz is all done!</h3>
-      <p>You scored <span id = "finalScore"> 0 </span>out of 10!</p>
-      <p > Now see how well your friends can do?</p>
+        <p>You scored <span id = "finalScore"> 0 </span>out of 10!</p>
+        <p > Now see how well your friends can do?</p>
+        </div>
     </div>
-<!--username form area-->
-<div id = "usernameArea">
-    
+    <!--username input area-->
+    <div id = "usernameArea">
+       <label for ="username">Enter a Username:</label>
+       <input type = "text" id = "username">
+    </div>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

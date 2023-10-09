@@ -1,21 +1,33 @@
 body {
     background-color:rgb(207, 199, 238);
-    font-family:'Gantari', Geneva, Verdana, sans-serif;
+    font-family: Geneva, Verdana, sans-serif;
 }
+.container {
+    max-width:70%;
+    margin:0 auto;
+    padding: 30px;
+    text-align : center;
+}
+
 h1 {
 text-align: center;
 }
 
 #quizArea {
-
+padding: 30px;
+border-radius: 15px;
+box-shadow: 0 0 15px rgb(59, 49, 49);
+background-color:rgb(19, 208, 214);
 }
 
 #question {
-
+font-size: 30px;
 }
 
 #choice {
-
+display : flex;
+justify-content: space-between;
+margin-top: 30px;
 }
 button {
     padding: 20px 20px;
@@ -28,13 +40,39 @@ button {
 #trueButton {
 background-color: aqua;
 color: black;
+border: none
 }
 
 #falseButton {
 background-color: aqua;
 color: black;
+border: none;
+}
+
+#progress {
+margin-top: 30px;
+display: flex;
+justify-content: space-between;
+font-size: 20px;
 }
 
 #results {
+text-align: center;
+margin-top: 20px;
+}
 
+#usernameArea {
+    text-align:center;
+    margin-top:20px;
+}
+label {
+    font-size:18px;
+}
+
+#username {
+    padding: 10px;
+    font-size:18px;
+    border:1px solid black;
+    border-radius:15px;
+    margin-right;5px;
 }
