@@ -40,7 +40,7 @@ function handleFalseButtonClick(){
 //collates score out of 10 and displys in final score paragraph 
 function showResults(){
     document.getElementById("results").classList.remove("hidden");
-    document.getElementById("finalScore").textContent = score +"/10";
+    document.getElementById("finalScore").textContent = score ;
 
     document.getElementById("congratulationsMessage").textContent = ` Congratulations, ${username}!`; 
 };
